@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
+    <title>Decentralized Initiatives</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Roboto for body, Lato for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Optional: Font Awesome for icons (if you want to add any later) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>My Website Name</h1>
+            <div class="logo">
+                <!-- You can replace this with an actual logo image or SVG -->
+                <span class="icon">&#9881;</span> <!-- Example gear icon -->
+                <h1>DecentralizedGov</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Initiatives</a></li>
+                    <li><a href="#">Resources</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -24,36 +32,67 @@
     </header>
 
     <main>
-        <div class="container">
-            <section class="hero">
-                <h2>Welcome to My Creative Space!</h2>
-                <p>This is where I share my projects, thoughts, and ideas.</p>
-                <a href="#" class="btn">Learn More</a>
-            </section>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Empowering Citizens Through Distributed Technologies</h2>
+                <p class="tagline">Transparent. Secure. Participatory.</p>
+                <a href="#" class="btn btn-primary">Explore Our Mission</a>
+                <a href="#" class="btn btn-secondary">Learn About Web3</a>
+            </div>
+        </section>
 
-            <section class="features">
-                <div class="feature-item">
-                    <h3>Feature One</h3>
-                    <p>Brief description of a key feature or service. This text can be anything you like.</p>
+
+        <section class="info-grid">
+            <div class="container">
+                <div class="grid-item">
+                    <i class="fas fa-lock icon-large"></i>
+                    <h3>Enhanced Security</h3>
+                    <p>Leveraging blockchain for immutable record-keeping and data integrity.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Feature Two</h3>
-                    <p>Another area to highlight something important. Think about what you want to showcase.</p>
+                <div class="grid-item">
+                    <i class="fas fa-handshake icon-large"></i>
+                    <h3>Transparent Governance</h3>
+                    <p>Enabling verifiable and auditable processes for public trust.</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Feature Three</h3>
-                    <p>And a third point to make your content more engaging for visitors.</p>
+                <div class="grid-item">
+                    <i class="fas fa-users icon-large"></i>
+                    <h3>Citizen Participation</h3>
+                    <p>Facilitating direct engagement in decision-making through decentralized tools.</p>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <!-- New AI Information Assistant Section -->
+        <section class="ai-assistant-section">
+            <div class="container">
+                <h2>✨ AI Information Assistant ✨</h2>
+                <p>Ask a question about decentralized initiatives, Web3, or governance.</p>
+                <textarea id="ai-input" placeholder="e.g., What is blockchain governance?" rows="5"></textarea>
+                <button id="ai-submit" class="btn btn-primary">Get AI Insights</button>
+                <div id="ai-loading" class="loading-indicator hidden">Generating response...</div>
+                <div id="ai-output" class="ai-output"></div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <h2>Ready to Engage?</h2>
+                <p>Join our community and contribute to the future of public services.</p>
+                <a href="#" class="btn btn-primary">Get Started Today</a>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 My Website Name. All rights reserved.</p>
+            <p>&copy; 2025 DecentralizedGov Initiatives. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>
