@@ -1,11 +1,11 @@
 /* Color Palette (Stark, High-Contrast with Red Accent) */
 :root {
     --color-primary: #CC0000; /* Bold Red for strong accents */
-    --color-background-light: #F0F0F0; /* Off-white, slightly lighter for contrast */
+    --color-background-light: #FFFFFF; /* Off-white, slightly lighter for contrast */
     --color-background-dark: #1A1A1A; /* Near Black for header/footer/dark elements */
     --color-text-dark: #1A1A1A; /* Near Black for primary text */
     --color-text-light: #FFFFFF; /* Pure White text */
-    --color-border: #999999; /* Mid-gray for subtle borders */
+    --color-border: #000000; /* Mid-gray for subtle borders */
 }
 
 /* Basic Reset & Body Styles */
