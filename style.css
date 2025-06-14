@@ -1,8 +1,8 @@
 /* Color Palette (Monochrome: Black, Gray, White) */
 :root {
-    --color-primary: #444444; /* Dark Gray for accents (replaces bold red) */
+    --color-primary: #FFFFFF; /* Dark Gray for accents (replaces bold red) */
     --color-secondary: #222222; /* Even darker gray for strong contrast elements */
-    --color-background-light: #F0F0F0; /* Off-white for light sections */
+    --color-background-light: #FFFFFF; /* Off-white for light sections */
     --color-background-dark: #1A1A1A; /* Near Black for header/footer/dark elements */
     --color-text-dark: #1A1A1A; /* Near Black for primary text */
     --color-text-light: #FFFFFF; /* Pure White text */
