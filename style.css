@@ -1,155 +1,377 @@
+/* Color Palette (Web3/Government Neutral with Red Accents) */
+:root {
+    --color-primary: #8B0000; /* Deep Red for accents */
+    --color-secondary: #004080; /* Dark Blue for contrast */
+    --color-background-light: #f8f9fa; /* Off-white for sections */
+    --color-background-dark: #2c3e50; /* Dark blue-gray for header/footer */
+    --color-text-dark: #34495e; /* Dark text */
+    --color-text-light: #ecf0f1; /* Light text */
+    --color-border: #dee2e6; /* Light gray border */
+}
+
 /* Basic Reset & Body Styles */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Using Google Font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4; /* Light gray background */
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
+    -webkit-font-smoothing: antialiased; /* Smoother text rendering */
 }
 
 .container {
-    width: 80%;
-    max-width: 1200px; /* Limits max width on large screens */
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden; /* Clear floats */
-    padding: 0 20px; /* Padding on the sides */
-}
-
-/* Header Styles */
-header {
-    background: #333; /* Dark gray */
-    color: #fff;
-    padding: 1rem 0;
-    border-bottom: 3px solid #007bff; /* Accent border */
-}
-
-header h1 {
-    margin: 0;
-    padding: 0;
-    float: left; /* Aligns heading to the left */
-}
-
-header nav {
-    float: right; /* Aligns navigation to the right */
-}
-
-header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; /* Remove bullet points */
-}
-
-header li {
-    display: inline; /* Make navigation items horizontal */
+    overflow: hidden;
     padding: 0 15px;
 }
 
-header a {
-    color: #fff;
-    text-decoration: none; /* Remove underline */
-    text-transform: uppercase;
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Header */
+header {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .icon {
+    font-size: 1.8em;
+    margin-right: 10px;
+    color: var(--color-primary); /* Red accent for icon */
+}
+
+header h1 {
+    color: var(--color-text-light);
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    transition: color 0.3s ease;
 }
 
-header a:hover {
-    color: #007bff; /* Blue on hover */
+header nav a:hover {
+    color: var(--color-primary); /* Red on hover */
 }
 
-/* Main Content Styles */
-main {
-    padding: 20px 0;
-}
-
-.hero {
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Subtle blue gradient */
+    color: var(--color-text-dark);
     text-align: center;
-    background: #fff;
-    padding: 40px 20px;
+    padding: 80px 20px;
     margin-bottom: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    border-bottom: 5px solid var(--color-primary); /* Strong red underline */
 }
 
-.hero h2 {
-    color: #007bff;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.hero-section h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--color-secondary); /* Dark blue for main heading */
 }
 
-.hero p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+.hero-section .tagline {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: var(--color-text-dark);
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin: 0 10px;
+    border: 2px solid transparent; /* Default transparent border */
 }
 
-.btn:hover {
-    background: #0056b3; /* Darker blue on hover */
+.btn-primary {
+    background-color: var(--color-primary); /* Deep Red */
+    color: #fff;
 }
 
-.features {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: space-between; /* Distribute items evenly */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+.btn-primary:hover {
+    background-color: #6a0000; /* Direct darker red */
 }
 
-.feature-item {
-    flex: 1; /* Each item takes equal space */
-    min-width: 280px; /* Minimum width before wrapping */
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-secondary); /* Dark Blue text */
+    border-color: var(--color-secondary); /* Dark Blue border */
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary); /* Dark Blue fill */
+    color: #fff;
+}
+
+/* Info Grid Section */
+.info-grid {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.info-grid .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between grid items */
+}
+
+.grid-item {
+    flex: 1;
+    min-width: 280px; /* Adjust as needed */
+    max-width: 350px;
+    background-color: #fff;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 25px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-item h3 {
-    color: #333;
-    margin-bottom: 10px;
+.grid-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Footer Styles */
-footer {
-    background: #333;
+.grid-item .icon-large {
+    font-size: 3em;
+    color: var(--color-primary); /* Red accent for icons */
+    margin-bottom: 15px;
+}
+
+/* AI Assistant Section */
+.ai-assistant-section {
+    background-color: #e9ecef; /* Slightly darker background */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ai-assistant-section h2 {
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.ai-assistant-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+#ai-input {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical; /* Allow vertical resizing */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+}
+
+#ai-input::placeholder {
+    color: #888;
+}
+
+#ai-submit {
+    margin-bottom: 20px;
+}
+
+.loading-indicator {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+    display: none; /* Hidden by default */
+}
+
+.loading-indicator.hidden {
+    display: none;
+}
+
+.ai-output {
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: left;
+    min-height: 100px; /* Minimum height for output area */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-wrap: break-word; /* Break long words */
+}
+
+.ai-output p {
+    margin-bottom: 1em;
+    color: var(--color-text-dark);
+}
+
+.error-message {
+    color: var(--color-primary); /* Red for error messages */
+    font-weight: bold;
+}
+
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: var(--color-secondary); /* Dark Blue background */
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 60px 20px;
     margin-top: 20px;
 }
 
-/* Responsive adjustments for smaller screens */
+.call-to-action h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9em;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary); /* Red on hover */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    header h1,
-    header nav {
-        float: none; /* Stacks header elements */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+
+    header .container {
+        flex-direction: column;
         text-align: center;
     }
 
     header nav ul {
-        padding-top: 10px;
+        padding-top: 15px;
     }
 
-    header li {
-        display: block; /* Stacks navigation items */
-        padding: 5px 0;
+    header nav li {
+        margin: 0 10px;
     }
 
-    .features {
-        flex-direction: column; /* Stacks feature items vertically */
-        align-items: center; /* Center them */
+    .hero-section {
+        padding: 60px 20px;
     }
 
-    .feature-item {
-        margin: 10px 0; /* Adjust margin for stacking */
-        width: 90%; /* Take more width when stacked */
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-section .tagline {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        display: block; /* Stack buttons vertically */
+        margin: 10px auto;
+        width: 80%; /* Make buttons wider */
+    }
+
+    .info-grid .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item {
+        width: 90%;
+        max-width: none; /* Allow full width on small screens */
+    }
+
+    #ai-input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-section .tagline {
+        font-size: 1.1em;
     }
 }
