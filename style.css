@@ -1,16 +1,155 @@
+/* Basic Reset & Body Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0f2f7; /* Light blue background */
-    color: #333;
-    text-align: center;
-    padding: 50px;
     margin: 0;
-}
-h1 {
-    color: #007bff; /* Bright blue heading */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-p {
-    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif; /* Using Google Font */
     line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Limits max width on large screens */
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+/* Header Styles */
+header {
+    background: #333; /* Dark gray */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #007bff; /* Accent border */
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    float: left; /* Aligns heading to the left */
+}
+
+header nav {
+    float: right; /* Aligns navigation to the right */
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove bullet points */
+}
+
+header li {
+    display: inline; /* Make navigation items horizontal */
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+header a:hover {
+    color: #007bff; /* Blue on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px 0;
+}
+
+.hero {
+    text-align: center;
+    background: #fff;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.hero h2 {
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+.features {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.feature-item {
+    flex: 1; /* Each item takes equal space */
+    min-width: 280px; /* Minimum width before wrapping */
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    header h1,
+    header nav {
+        float: none; /* Stacks header elements */
+        text-align: center;
+    }
+
+    header nav ul {
+        padding-top: 10px;
+    }
+
+    header li {
+        display: block; /* Stacks navigation items */
+        padding: 5px 0;
+    }
+
+    .features {
+        flex-direction: column; /* Stacks feature items vertically */
+        align-items: center; /* Center them */
+    }
+
+    .feature-item {
+        margin: 10px 0; /* Adjust margin for stacking */
+        width: 90%; /* Take more width when stacked */
+    }
 }
