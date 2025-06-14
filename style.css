@@ -2,7 +2,7 @@
 :root {
     --color-primary: #CC0000; /* Bold Red for strong accents */
     --color-background-light: #FFFFFF; /* Off-white, slightly lighter for contrast */
-    --color-background-dark: #1A1A1A; /* Near Black for header/footer/dark elements */
+    --color-background-dark: #111111; /* Near Black for header/footer/dark elements */
     --color-text-dark: #1A1A1A; /* Near Black for primary text */
     --color-text-light: #FFFFFF; /* Pure White text */
     --color-border: #000000; /* Mid-gray for subtle borders */
@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     max-width: 1100px;
     margin: auto;
     overflow: hidden;
@@ -32,7 +32,7 @@ h1, h2, h3 {
     color: var(--color-text-dark);
     margin-bottom: 0.5em;
     text-transform: uppercase; /* All caps for intensity */
-    letter-spacing: 1px; /* Slight spacing for headings */
+    letter-spacing: 0px; /* Slight spacing for headings */
 }
 
 h1 { font-size: 2.8em; }
