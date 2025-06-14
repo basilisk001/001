@@ -1,18 +1,17 @@
-/* Color Palette (Web3/Government Neutral with Red Accents) */
+/* Color Palette (Stark, High-Contrast with Red Accent) */
 :root {
-    --color-primary: #8B0000; /* Deep Red for accents */
-    --color-secondary: #004080; /* Dark Blue for contrast */
-    --color-background-light: #f8f9fa; /* Off-white for sections */
-    --color-background-dark: #2c3e50; /* Dark blue-gray for header/footer */
-    --color-text-dark: #34495e; /* Dark text */
-    --color-text-light: #ecf0f1; /* Light text */
-    --color-border: #dee2e6; /* Light gray border */
+    --color-primary: #CC0000; /* Bold Red for strong accents */
+    --color-background-light: #F0F0F0; /* Off-white, slightly lighter for contrast */
+    --color-background-dark: #1A1A1A; /* Near Black for header/footer/dark elements */
+    --color-text-dark: #1A1A1A; /* Near Black for primary text */
+    --color-text-light: #FFFFFF; /* Pure White text */
+    --color-border: #999999; /* Mid-gray for subtle borders */
 }
 
 /* Basic Reset & Body Styles */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Keep Roboto for body readability */
     line-height: 1.6;
     color: var(--color-text-dark);
     background-color: var(--color-background-light);
@@ -29,25 +28,28 @@ body {
 
 /* Typography */
 h1, h2, h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif; /* Bold, condensed font for impact */
     color: var(--color-text-dark);
     margin-bottom: 0.5em;
+    text-transform: uppercase; /* All caps for intensity */
+    letter-spacing: 1px; /* Slight spacing for headings */
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
 
 p {
     margin-bottom: 1em;
+    font-size: 1.1em; /* Slightly larger body text */
 }
 
 /* Header */
 header {
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
-    padding: 1.2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 1.5rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4); /* Stronger shadow */
 }
 
 header .container {
@@ -62,15 +64,16 @@ header .container {
 }
 
 .logo .icon {
-    font-size: 1.8em;
-    margin-right: 10px;
-    color: var(--color-primary); /* Red accent for icon */
+    font-size: 2.2em; /* Larger icon */
+    margin-right: 15px;
+    color: var(--color-primary); /* Bold Red for icon */
 }
 
 header h1 {
     color: var(--color-text-light);
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
 header nav ul {
@@ -81,7 +84,7 @@ header nav ul {
 
 header nav li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 35px; /* More spacing */
 }
 
 header nav a {
@@ -89,6 +92,7 @@ header nav a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-size: 1.1em;
 }
 
 header nav a:hover {
@@ -97,108 +101,141 @@ header nav a:hover {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Subtle blue gradient */
+    position: relative; /* Needed for absolute positioning of the slash */
+    background-color: var(--color-background-light); /* Off-white background */
     color: var(--color-text-dark);
     text-align: center;
-    padding: 80px 20px;
-    margin-bottom: 20px;
-    border-bottom: 5px solid var(--color-primary); /* Strong red underline */
+    padding: 100px 20px; /* More vertical padding */
+    margin-bottom: 40px; /* More space below */
+    overflow: hidden; /* Hide overflowing diagonal slash */
+}
+
+.diagonal-red-slash {
+    position: absolute;
+    top: -50%; /* Start the slash from outside the top-left */
+    left: -50%;
+    width: 200%; /* Make it wide enough to cover */
+    height: 200%; /* Make it tall enough to cover */
+    background-color: var(--color-primary); /* The bold red color */
+    transform: rotate(-15deg); /* Rotate to create the diagonal effect */
+    z-index: 1; /* Ensure it's behind content */
+    opacity: 0.8; /* Slight transparency for layering effect */
+}
+
+.hero-section .container {
+    position: relative; /* Z-index for content above slash */
+    z-index: 2;
 }
 
 .hero-section h2 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    color: var(--color-secondary); /* Dark blue for main heading */
+    font-size: 4em; /* Very large heading for impact */
+    margin-bottom: 20px;
+    color: var(--color-text-dark); /* Dark text on light background */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Subtle text shadow */
 }
 
 .hero-section .tagline {
-    font-size: 1.4em;
+    font-size: 1.8em; /* Larger tagline */
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: var(--color-text-dark);
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 15px 35px; /* Larger buttons */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0; /* Sharp corners for starkness */
     font-weight: bold;
+    font-size: 1.2em; /* Larger font in buttons */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    margin: 0 10px;
-    border: 2px solid transparent; /* Default transparent border */
+    margin: 0 15px; /* More spacing between buttons */
+    border: 3px solid transparent; /* Thicker border for secondary */
+    text-transform: uppercase;
 }
 
 .btn-primary {
-    background-color: var(--color-primary); /* Deep Red */
-    color: #fff;
+    background-color: var(--color-primary); /* Bold Red */
+    color: var(--color-text-light); /* White text */
 }
 
 .btn-primary:hover {
-    background-color: #6a0000; /* Direct darker red */
+    background-color: #A30000; /* Slightly darker red on hover */
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--color-secondary); /* Dark Blue text */
-    border-color: var(--color-secondary); /* Dark Blue border */
+    color: var(--color-text-dark); /* Dark text */
+    border-color: var(--color-text-dark); /* Dark border */
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-secondary); /* Dark Blue fill */
-    color: #fff;
+    background-color: var(--color-text-dark); /* Dark fill */
+    color: var(--color-text-light); /* White text */
 }
 
 /* Info Grid Section */
 .info-grid {
-    background-color: #fff;
-    padding: 40px 0;
+    background-color: var(--color-background-dark); /* Dark background */
+    color: var(--color-text-light); /* Light text */
+    padding: 60px 0;
 }
 
 .info-grid .container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px; /* Space between grid items */
+    gap: 30px; /* More space between grid items */
 }
 
 .grid-item {
     flex: 1;
-    min-width: 280px; /* Adjust as needed */
+    min-width: 280px;
     max-width: 350px;
-    background-color: #fff;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 25px;
+    background-color: #333; /* Darker gray for cards */
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 0; /* Sharp corners */
+    padding: 30px; /* More padding */
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More pronounced shadow */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Stronger shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transform: translateY(-8px); /* More pronounced lift effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.grid-item h3 {
+    color: var(--color-primary); /* Red headings */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.grid-item p {
+    color: #CCC; /* Lighter text for readability on dark background */
 }
 
 .grid-item .icon-large {
-    font-size: 3em;
+    font-size: 4em; /* Even larger icons */
     color: var(--color-primary); /* Red accent for icons */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* AI Assistant Section */
 .ai-assistant-section {
-    background-color: #e9ecef; /* Slightly darker background */
-    padding: 50px 20px;
+    background-color: var(--color-background-light); /* Off-white background */
+    color: var(--color-text-dark);
+    padding: 60px 20px;
     text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    margin-top: 40px;
+    border-top: 5px solid var(--color-primary); /* Red border for separation */
+    border-bottom: 5px solid var(--color-primary);
 }
 
 .ai-assistant-section h2 {
-    color: var(--color-secondary);
+    color: var(--color-text-dark);
     margin-bottom: 20px;
 }
 
@@ -209,30 +246,42 @@ header nav a:hover {
 
 #ai-input {
     width: 80%;
-    max-width: 600px;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    font-size: 1em;
+    max-width: 700px; /* Wider input */
+    padding: 18px; /* More padding */
+    margin-bottom: 25px;
+    border: 2px solid var(--color-border); /* Thicker border */
+    border-radius: 5px; /* Slightly rounded for input field */
+    font-size: 1.1em; /* Larger font */
     font-family: 'Roboto', sans-serif;
-    resize: vertical; /* Allow vertical resizing */
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+    resize: vertical;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.15); /* More visible shadow */
 }
 
 #ai-input::placeholder {
-    color: #888;
+    color: #666;
 }
 
 #ai-submit {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    background-color: var(--color-primary); /* Red button */
+    color: var(--color-text-light);
+    border: none;
+    padding: 15px 40px; /* Larger button */
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 0; /* Sharp corners */
+}
+
+#ai-submit:hover {
+    background-color: #A30000; /* Darker red on hover */
 }
 
 .loading-indicator {
-    margin-top: 20px;
+    margin-top: 25px;
     font-style: italic;
     color: #666;
-    display: none; /* Hidden by default */
+    font-size: 1.1em;
+    display: none;
 }
 
 .loading-indicator.hidden {
@@ -241,15 +290,16 @@ header nav a:hover {
 
 .ai-output {
     background-color: #fff;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 25px;
-    margin-top: 30px;
+    border: 2px solid var(--color-border); /* Thicker border */
+    border-radius: 8px; /* Softly rounded corners for output */
+    padding: 30px; /* More padding */
+    margin-top: 40px;
     text-align: left;
-    min-height: 100px; /* Minimum height for output area */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    white-space: pre-wrap; /* Preserve whitespace and wrap text */
-    word-wrap: break-word; /* Break long words */
+    min-height: 150px; /* More minimum height */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Clearer shadow */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1.1em;
 }
 
 .ai-output p {
@@ -258,48 +308,49 @@ header nav a:hover {
 }
 
 .error-message {
-    color: var(--color-primary); /* Red for error messages */
+    color: var(--color-primary); /* Bold Red for error messages */
     font-weight: bold;
 }
 
 
 /* Call to Action Section */
 .call-to-action {
-    background-color: var(--color-secondary); /* Dark Blue background */
-    color: #fff;
+    background-color: var(--color-background-dark); /* Dark background */
+    color: var(--color-text-light);
     text-align: center;
-    padding: 60px 20px;
-    margin-top: 20px;
+    padding: 80px 20px; /* More padding */
+    margin-top: 40px;
 }
 
 .call-to-action h2 {
-    color: #fff;
-    margin-bottom: 15px;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
 }
 
 .call-to-action p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
+    font-size: 1.2em; /* Larger text */
+    margin-bottom: 40px;
+    color: #DDD; /* Slightly lighter text */
 }
-
 
 /* Footer */
 footer {
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
     text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9em;
+    padding: 2rem 0; /* More padding */
+    font-size: 1em;
+    border-top: 5px solid var(--color-primary); /* Red border at top */
 }
 
 .footer-links {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .footer-links a {
     color: var(--color-text-light);
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px; /* More spacing */
     transition: color 0.3s ease;
 }
 
@@ -310,7 +361,8 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 { font-size: 2em; }
-    h2 { font-size: 1.8em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.6em; }
 
     header .container {
         flex-direction: column;
@@ -326,15 +378,15 @@ footer {
     }
 
     .hero-section {
-        padding: 60px 20px;
+        padding: 80px 20px;
     }
 
     .hero-section h2 {
-        font-size: 2.2em;
+        font-size: 2.8em;
     }
 
     .hero-section .tagline {
-        font-size: 1.1em;
+        font-size: 1.4em;
     }
 
     .btn {
@@ -350,11 +402,16 @@ footer {
 
     .grid-item {
         width: 90%;
-        max-width: none; /* Allow full width on small screens */
+        max-width: none;
+    }
+
+    .ai-assistant-section {
+        padding: 40px 20px;
     }
 
     #ai-input {
         width: 90%;
+        padding: 15px;
     }
 }
 
@@ -364,7 +421,7 @@ footer {
     }
 
     .logo h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .hero-section h2 {
@@ -372,6 +429,23 @@ footer {
     }
 
     .hero-section .tagline {
-        font-size: 1.1em;
+        font-size: 1.2em;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    .grid-item h3 {
+        font-size: 1.4em;
+    }
+
+    .grid-item p {
+        font-size: 1em;
+    }
+
+    .ai-assistant-section h2 {
+        font-size: 1.8em;
     }
 }
