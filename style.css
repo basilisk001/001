@@ -11,7 +11,7 @@
 /* Basic Reset & Body Styles */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Keep Roboto for body readability */
+    font-family: 'Helvectica', sans-serif; /* Keep Roboto for body readability */
     line-height: 1.6;
     color: var(--color-text-dark);
     background-color: var(--color-background-light);
@@ -20,7 +20,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     overflow: hidden;
     padding: 0 15px;
@@ -28,7 +28,7 @@ body {
 
 /* Typography */
 h1, h2, h3 {
-    font-family: 'Oswald', sans-serif; /* Bold, condensed font for impact */
+    font-family: 'Helvectica', sans-serif; /* Bold, condensed font for impact */
     color: var(--color-text-dark);
     margin-bottom: 0.5em;
     text-transform: uppercase; /* All caps for intensity */
@@ -128,7 +128,7 @@ header nav a:hover {
 }
 
 .hero-section h2 {
-    font-size: 4em; /* Very large heading for impact */
+    font-size: 8em; /* Very large heading for impact */
     margin-bottom: 20px;
     color: var(--color-text-dark); /* Dark text on light background */
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Subtle text shadow */
@@ -279,7 +279,7 @@ header nav a:hover {
 .loading-indicator {
     margin-top: 25px;
     font-style: italic;
-    color: #666;
+    color: #0000;
     font-size: 1.1em;
     display: none;
 }
@@ -370,7 +370,7 @@ footer {
     }
 
     header nav ul {
-        padding-top: 15px;
+        padding-top: 35px;
     }
 
     header nav li {
@@ -410,7 +410,7 @@ footer {
     }
 
     #ai-input {
-        width: 90%;
+        width: 60%;
         padding: 15px;
     }
 }
